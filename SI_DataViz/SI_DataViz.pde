@@ -1,9 +1,12 @@
 Table table;
-JSONObject json  ;
+JSONObject json;
+int dataEntries = 20;
 
 void setup() {
   size(1000,600);
+  createTable();
   getData();
+  addDataToTable();
 }
 
 void draw() {
@@ -36,5 +39,16 @@ void createTable() {
   table.addColumn("notes"); // description of event
   table.addColumn("sources"); // sources of reports
   table.addColumn("fatalities"); // todesfälle
+}
+
+void addDataToTable() {
+  for (int i = 0; i<dataEntries; i++) {
+    
+    TableRow row = table.addRow();
+    row.setString("country", json.getJSONArray("data").getJSONObject(i).getString("country"));
+    
   
+    // save table as csv
+    saveTable(table, "data/data.csv");
+  }
 }
