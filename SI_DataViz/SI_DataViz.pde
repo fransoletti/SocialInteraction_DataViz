@@ -16,10 +16,10 @@ void getData() {
 
 void createTable() {
   table = new Table();
-  table.addColumn("Country");
-  table.addColumn("Date");
-  table.addColumn("Time Precision");
-  table.addColumn("Type of Violence");
+  table.addColumn("country");
+  table.addColumn("date");
+  table.addColumn("time precision"); // how precise is the time of the event
+  table.addColumn("type of violence");
   table.addColumn("actor1");
   table.addColumn("associated actor 1"); // associated actor that is allied with actor1 / identifies with actor1
   table.addColumn("inter1"); // A numeric code (int) indicating the type of ACTOR1.
@@ -30,9 +30,9 @@ void createTable() {
   table.addColumn("administrative Area 1"); // biggest administrative area
   table.addColumn("administrative Area 2"); // smaller administrative area
   table.addColumn("administrative Area 3"); // smallest administrative area
-  table.addColumn("location"); // smallest administrative area
-  table.addColumn("latitude"); // smallest administrative area
-  table.addColumn("longtitude"); // smallest administrative area
+  table.addColumn("location");
+  table.addColumn("latitude");
+  table.addColumn("longtitude");
   table.addColumn("notes"); // description of event
   table.addColumn("sources"); // sources of reports
   table.addColumn("fatalities"); // todesfälle
